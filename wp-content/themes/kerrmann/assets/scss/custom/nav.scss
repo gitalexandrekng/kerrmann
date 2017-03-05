@@ -1,0 +1,149 @@
+.header_top{
+    background-image:url(../../images/header_kerrmann.jpg);
+    background-size:cover;
+    background-position:center;
+    height:70vh;
+    max-height:600px;
+    width:100vw;
+    padding-top:20px;
+    position:relative;
+
+    &:after{
+        position:absolute;
+        content:'';
+        width:50vw;
+        height:100%;
+        top:0;
+        background:linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));
+        z-index:5;
+    }
+
+    .view_point{
+        opacity: 0;
+        position:absolute;
+    }
+
+    .content_header{
+        z-index:6;
+        position:relative;
+        width:100vw;
+        max-width: 1200px;
+        margin:auto;
+        height:100%;
+        display: flex;
+        align-items: center;
+
+        .txt{
+            padding:0px 15px;
+
+            ul{
+                margin:0;
+
+                li{
+                    list-style-type: none;
+                    color:white;
+                    margin:7px 0px;
+
+                    i{
+                        margin-right:10px;
+                    }
+                }
+            }
+
+            .buttonz{
+                margin-top:30px;
+            }
+
+            .custombutton_tel{
+                @extend .button;
+                background:rgba(0,0,0,1) !important;
+
+                i{
+                    margin-right:10px;
+                }
+            }
+        }
+    }
+
+    .container_nav{
+        position:fixed;
+        top:0;
+        left:0;
+        padding:30px;
+        width:100%;
+        background:transparent;
+        transition:0.3s;
+        z-index:999;
+
+        .top_navigation{
+            max-width:1200px;
+            margin:auto;
+            display: flex;
+            align-items: center;
+            padding:10px 0px;
+
+            .logo{
+
+                img{
+                    width:120px;
+                }
+            }
+
+            .menu-top_menu-container{
+                flex:1;
+
+                ul{
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .current-menu-item{
+                        a{
+                            border-bottom:2px solid $primary-color;
+                            color:$primary-color;
+                        }
+                    }
+
+                    li{
+
+                        a{
+                            font-weight: bold;
+                            text-transform: uppercase;
+                            color:white;
+                            font-size:12px;
+                            padding:10px 15px;
+
+                            &:hover{
+                                color:$primary-color;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .fixed_nav_style{
+        top:0;
+        background:lighten(black,0%);
+        padding:0px;
+
+        .top_navigation{
+
+            .logo{
+                img{
+                    width:100px;
+                }
+            }
+
+            .menu-top_menu-container{
+                ul{
+                    .current-menu-item{
+                        a{
+                            border-bottom:0px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
